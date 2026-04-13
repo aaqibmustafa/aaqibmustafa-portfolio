@@ -54,7 +54,7 @@ const Navbar = () => {
             </div>
           </div>
           <span className="hidden text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:block">
-            Arif<span className="text-[#27b173]">.</span>
+            Aaqib<span className="text-[#27b173]">.</span>
           </span>
         </Link>
 

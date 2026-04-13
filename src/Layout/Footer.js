@@ -1,18 +1,33 @@
 import React from "react";
-import { FaReact, FaFigma, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
-import { SiTailwindcss, SiGithub, SiFramer, SiJavascript } from "react-icons/si";
+import { FaReact, FaFigma, FaLinkedin, FaTwitter, FaInstagram, FaPhp, FaLaravel } from "react-icons/fa";
+import { SiTailwindcss, SiGithub, SiFramer, SiJavascript, SiCodeigniter, SiMysql } from "react-icons/si";
 import { motion } from 'framer-motion';
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
+  // const techStack = [
+  //   { name: "React JS", icon: FaReact, color: "#61DAFB" },
+  //   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
+  //   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  //   { name: "Framer Motion", icon: SiFramer, color: "#E91E63" },
+  //   { name: "GitHub", icon: SiGithub, color: "#4078c0" },
+  //   { name: "Figma", icon: FaFigma, color: "#A259FF" },
+  // ];
   const techStack = [
-    { name: "React JS", icon: FaReact, color: "#61DAFB" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
-    { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-    { name: "Framer Motion", icon: SiFramer, color: "#E91E63" },
-    { name: "GitHub", icon: SiGithub, color: "#4078c0" },
-    { name: "Figma", icon: FaFigma, color: "#A259FF" },
-  ];
+    { name: "PHP", icon: FaPhp, color: "#777BB4" },
+  { name: "Laravel", icon: FaLaravel, color: "#FF2D20" },
+  { name: "CodeIgniter", icon: SiCodeigniter, color: "#EF4223" },
+  { name: "MySQL", icon: SiMysql, color: "#00758F" },
+  { name: "React JS", icon: FaReact, color: "#61DAFB" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Framer Motion", icon: SiFramer, color: "#E91E63" },
+  { name: "GitHub", icon: SiGithub, color: "#4078c0" },
+  { name: "Figma", icon: FaFigma, color: "#A259FF" },
+
+  // Newly added
+  
+];
 
   return (
     <footer className="relative w-full border-t border-gray-200 bg-white/40 backdrop-blur-2xl transition-all duration-500 dark:border-white/5 dark:bg-black/40 overflow-hidden">
@@ -38,7 +53,7 @@ const Footer = () => {
 
             <div className="text-center lg:text-left space-y-4">
               <h2 className="text-4xl font-black tracking-tight text-gray-900 dark:text-white" style={{ fontFamily: "'MyFont5', sans-serif" }}>
-                Arif Raza<span className="text-[#27b173]">.</span>
+                Aaqib Mustafa<span className="text-[#27b173]">.</span>
               </h2>
               <p className="max-w-xs text-sm font-medium leading-relaxed text-gray-600 dark:text-gray-400">
                 Architecting digital solutions that blend technical excellence with human-centric design. Transforming vision into reality.
@@ -73,28 +88,28 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-6 lg:items-end lg:text-right lg:w-1/3">
             <div className="space-y-2">
               <p className="text-xs font-black uppercase tracking-widest text-gray-900 dark:text-white">
-                © {new Date().getFullYear()} Muhammad Arif Raza
+                © {new Date().getFullYear()} Aaqib Mustafa
               </p>
               <p className="text-[10px] font-bold text-gray-500 dark:text-gray-500 tracking-wide">
-                Built with Passion in Rawalpindi, PK.
+                Built with Passion in Islamabad, PK.
               </p>
             </div>
             <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#27b173]/40 lg:bg-gradient-to-l" />
             <div className="flex items-center gap-2">
               <MdEmail size={24} />
               <p className="text-[10px] font-black text-[#27b173] uppercase tracking-[0.3em] opacity-60">
-                real.arifraza007@gmail.com
+                aaqibmustafaa@gmail.com
               </p>
             </div>
             {/* Social Links */}
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/muhammad-arif-raza-6b7bb3190/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
+              <a href="https://www.linkedin.com/in/aaqibmustafa" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
                 <FaLinkedin size={20} />
               </a>
-              <a href="https://x.com/chuadhary_raza?s=21" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
+              <a href="https://x.com/aaqibmustafaa" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
                 <FaTwitter size={20} />
               </a>
-              <a href="https://www.instagram.com/arifchaudhary_007" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
+              <a href="https://www.instagram.com/aaqibmustafaa" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
                 <FaInstagram size={20} />
               </a>
             </div>

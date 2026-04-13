@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import aboutsectionimage from "../assets/images/aboutsection.jpg";
+import aboutsectionimage from "../assets/images/aboutsection.png";
 import resume from "../assets/resume/Muhammad Arif Raza.pdf";
 import { MdEmail, MdDownload } from "react-icons/md";
 import aboutsectionsvg from "../assets/About _ Victor Eke-8.svg";
@@ -127,7 +127,7 @@ const AboutSection = () => {
                         </motion.h1>
                         <div className="space-y-6 max-w-3xl">
                             <p className="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">
-                                I'm <span className="font-bold text-gray-900 dark:text-white">Muhammad Arif Raza</span>, a Full Stack Web and App Developer / Full Stack Software Engineer with a focus on building scalable, high-performance applications.
+                                I'm <span className="font-bold text-gray-900 dark:text-white">Aaqib Mustafa</span>, a Full Stack Web and App Developer / Full Stack Software Engineer with a focus on building scalable, high-performance applications.
                             </p>
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
                                 With over 4 years of experience at HMB Solutions, I've mastered the art of turning complex business requirements into elegant digital realities. I specialize in building robust solutions for both web and mobile platforms.
@@ -143,7 +143,7 @@ const AboutSection = () => {
                         <div className="relative glass p-3 rounded-[3rem] overflow-hidden">
                             <img
                                 src={aboutsectionimage}
-                                alt="Muhammad Arif Raza"
+                                alt="Aaqib Mustafa"
                                 className="w-full aspect-[4/5] rounded-[2.5rem] object-cover filter contrast-[1.05] grayscale-[10%] group-hover:grayscale-0 transition-all duration-700"
                             />
                         </div>
