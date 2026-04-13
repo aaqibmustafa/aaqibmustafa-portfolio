@@ -68,10 +68,10 @@ const ContactUs = () => {
     };
 
     const socialLinks = [
-        { icon: <FiGithub />, href: "https://github.com/arifch786", label: "GitHub" },
-        { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/muhammad-arif-raza-6b7bb3190/", label: "LinkedIn" },
-        { icon: <FiInstagram />, href: "https://www.instagram.com/arifchaudhary_007", label: "Instagram" },
-        { icon: <FiTwitter />, href: "https://x.com/chuadhary_raza?s=21", label: "Twitter" },
+        { icon: <FiGithub />, href: "https://github.com/aaqibmustafa", label: "GitHub" },
+        { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/aaqibmustafa", label: "LinkedIn" },
+        { icon: <FiInstagram />, href: "https://www.instagram.com/aaqibmustafaa", label: "Instagram" },
+        { icon: <FiTwitter />, href: "https://x.com/aaqibmustafaa", label: "Twitter" },
     ];
 
     return (
@@ -129,7 +129,7 @@ const ContactUs = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 uppercase tracking-wider">Email Me</p>
-                                        <p className="text-gray-900 dark:text-gray-200 font-medium">real.arifraza007@gmail.com</p>
+                                        <p className="text-gray-900 dark:text-gray-200 font-medium">aaqibmustafaa@gmail.com</p>
                                     </div>
                                 </div>
 

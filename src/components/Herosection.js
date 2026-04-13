@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaGithub, FaYoutube, FaInstagram, FaLinkedin, FaTwitter, FaCodepen } from "react-icons/fa";
 import { motion } from 'framer-motion';
-import profileImg from '../assets/images/3699048341.png'
+import profileImg from '../assets/images/AaqibMustafa_bg.png'
 
 const Herosection = () => {
     const containerVariants = {
@@ -63,16 +63,16 @@ const Herosection = () => {
                             className="text-gray-600 dark:text-gray-400 text-lg sm:text-2xl max-w-2xl leading-relaxed font-medium"
                             variants={itemVariants}
                         >
-                            I'm <span className="text-gray-900 dark:text-white border-b-2 border-[#27b173]/30">Muhammad Arif Raza</span>. Crafting high-performance, accessible, and beautiful web and mobile applications for the modern digital era. I specialize in building scalable full-stack solutions and intuitive mobile experiences that drive user engagement. My passion lies in solving complex engineering challenges to deliver seamless, impact-driven software products.
+                            I'm <span className="text-gray-900 dark:text-white border-b-2 border-[#27b173]/30">Aaqib Mustafa</span>. Crafting high-performance, accessible, and beautiful web and mobile applications for the modern digital era. I specialize in building scalable full-stack solutions and intuitive mobile experiences that drive user engagement. My passion lies in solving complex engineering challenges to deliver seamless, impact-driven software products.
                         </motion.p>
                     </div>
 
                     <motion.div className="flex flex-wrap gap-5" variants={itemVariants}>
                         {[
-                            { icon: FaGithub, href: "https://github.com/arifch786", title: "GitHub" },
-                            { icon: FaTwitter, href: "https://x.com/chuadhary_raza?s=21", title: "Twitter" },
-                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/muhammad-arif-raza-6b7bb3190/", title: "LinkedIn" },
-                            { icon: FaInstagram, href: "https://www.instagram.com/arifchaudhary_007", title: "Instagram" },
+                            { icon: FaGithub, href: "https://github.com/aaqibmustafa", title: "GitHub" },
+                            { icon: FaTwitter, href: "https://x.com/aaqibmustafaa", title: "Twitter" },
+                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/aaqibmustafa", title: "LinkedIn" },
+                            { icon: FaInstagram, href: "https://www.instagram.com/aaqibmustafaa", title: "Instagram" },
                             { icon: FaYoutube, href: "#", title: "YouTube" },
                             { icon: FaCodepen, href: "#", title: "CodePen" }
                         ].map((social, idx) => (
@@ -104,7 +104,7 @@ const Herosection = () => {
                             <div className="w-full h-full rounded-[2.8rem] overflow-hidden bg-slate-100 dark:bg-[#0f172a] pt-10 sm:pt-14 lg:pt-20 relative">
                                 <img
                                     src={profileImg}
-                                    alt="Muhammad Arif Raza"
+                                    alt="Aaqib Mustafa"
                                     className="w-full h-full object-cover object-top filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 scale-[1.02] group-hover:scale-105"
                                 />
                                 {/* Overlay Gradient - Subtle */}
