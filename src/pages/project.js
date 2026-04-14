@@ -20,78 +20,90 @@ const Project = () => {
     };
 
     useEffect(() => {
-        // Refresh ScrollTrigger to ensure correct positions
-        ScrollTrigger.refresh();
+        const ctx = gsap.context(() => {
+            ScrollTrigger.refresh();
 
-        // Header Reveal
-        gsap.fromTo(
-            ".projects-header",
-            { opacity: 0, y: -40, filter: "blur(10px)" },
-            {
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-                duration: 1.2,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: ".projects-header",
-                    start: "top 85%",
-                }
-            }
-        );
-
-        // Cards Staggered Reveal
-        gsap.fromTo(
-            projectRef.current,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.95,
-                filter: "blur(8px)"
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                filter: "blur(0px)",
-                duration: 1,
-                stagger: 0.15,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".projects-grid",
-                    start: "top 80%",
-                }
-            }
-        );
-
-        // Hover effects with GSAP refined
-        projectRef.current.forEach((card) => {
-            card.addEventListener("mouseenter", () => {
-                gsap.to(card, {
-                    y: -10,
-                    scale: 1.02,
-                    duration: 0.3,
-                    ease: "power2.out",
-                    boxShadow: "0 25px 50px rgba(39, 177, 115, 0.12)"
-                });
-            });
-            card.addEventListener("mouseleave", () => {
-                gsap.to(card, {
+            // Header Reveal
+            gsap.fromTo(
+                ".projects-header",
+                { opacity: 0, y: -40, filter: "blur(10px)" },
+                {
+                    opacity: 1,
                     y: 0,
-                    scale: 1,
-                    duration: 0.3,
-                    ease: "power2.out",
-                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)"
-                });
-            });
+                    filter: "blur(0px)",
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: ".projects-header",
+                        start: "top 85%",
+                    }
+                }
+            );
+
+            // Cards Staggered Reveal
+            if (projectRef.current.length > 0) {
+                gsap.fromTo(
+                    projectRef.current,
+                    {
+                        opacity: 0,
+                        y: 40,
+                        scale: 0.95,
+                        filter: "blur(8px)"
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 1,
+                        stagger: 0.15,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: ".projects-grid",
+                            start: "top 80%",
+                        }
+                    }
+                );
+            }
+        });
+
+        // Store event handlers for cleanup
+        const hoverHandlers = new Map();
+
+        projectRef.current.forEach((card) => {
+            if (card) {
+                const handleMouseEnter = () => {
+                    gsap.to(card, {
+                        y: -10,
+                        scale: 1.02,
+                        duration: 0.3,
+                        ease: "power2.out",
+                        boxShadow: "0 25px 50px rgba(39, 177, 115, 0.12)"
+                    });
+                };
+                const handleMouseLeave = () => {
+                    gsap.to(card, {
+                        y: 0,
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out",
+                        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)"
+                    });
+                };
+                
+                hoverHandlers.set(card, { handleMouseEnter, handleMouseLeave });
+                card.addEventListener("mouseenter", handleMouseEnter);
+                card.addEventListener("mouseleave", handleMouseLeave);
+            }
         });
 
         return () => {
-            ScrollTrigger.getAll().forEach(t => t.kill());
-            projectRef.current.forEach((card) => {
+            ctx.revert();
+            // Clean up event listeners
+            hoverHandlers.forEach(({ handleMouseEnter, handleMouseLeave }, card) => {
                 if (card) {
-                    card.removeEventListener("mouseenter", () => { });
-                    card.removeEventListener("mouseleave", () => { });
+                    card.removeEventListener("mouseenter", handleMouseEnter);
+                    card.removeEventListener("mouseleave", handleMouseLeave);
                 }
             });
         };

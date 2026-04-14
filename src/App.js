@@ -1,7 +1,6 @@
-
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from '../src/Layout/Navbar';
 import Footer from '../src/Layout/Footer';
 import About from '../src/components/AboutSection';

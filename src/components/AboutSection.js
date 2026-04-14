@@ -4,16 +4,17 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutsectionimage from "../assets/images/aboutsection.png";
 import resume from "../assets/resume/Muhammad Arif Raza.pdf";
-import { MdEmail, MdDownload } from "react-icons/md";
+import { MdDownload } from "react-icons/md";
 import aboutsectionsvg from "../assets/About _ Victor Eke-8.svg";
-import { FaReact, FaSass, FaNodeJs, FaNetworkWired, FaBootstrap, FaGit, FaGitlab, FaPython, FaFirefoxBrowser, FaChrome, FaFigma, FaSpotify, FaSteam, FaHeadphones, FaApple } from 'react-icons/fa';
-import { SiRedux, SiNextdotjs, SiTailwindcss, SiVite, SiExpress, SiMongodb, SiJetbrains, SiVisualstudio, SiGit, SiNotion, SiMicrosoft, SiGithub, SiGitlab, SiVercel, SiNetlify, SiAsus, SiSamsung, SiXiaomi, SiLogitech, SiFirebase, SiAndroidstudio, SiXcode, SiGoogleplay, SiAppstore, SiExpo, SiAmazonwebservices, SiAmazonec2, SiAmazons3, SiHostinger, SiNamecheap, SiGodaddy } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaFigma, FaAws } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiExpress, SiMongodb, SiGit, SiNotion, SiGithub, SiVercel, SiNetlify, SiFirebase, SiAndroidstudio, SiXcode, SiGoogleplay, SiAppstore, SiExpo, SiHostinger, SiNamecheap, SiGodaddy } from 'react-icons/si';
+import { VscCode } from 'react-icons/vsc';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const items = {
     tools: [
-        { name: "Visual Studio Code", url: "#", description: "Text Editor", icon: <SiVisualstudio className="text-[#007acc]" /> },
+        { name: "Visual Studio Code", url: "#", description: "Text Editor", icon: <VscCode className="text-[#007acc]" /> },
         { name: "Android Studio", url: "#", description: "Mobile Dev", icon: <SiAndroidstudio className="text-[#3ddc84]" /> },
         { name: "Xcode", url: "#", description: "iOS Dev", icon: <SiXcode className="text-[#1575f5]" /> },
         { name: "Figma", url: "#", description: "Design Tool", icon: <FaFigma className="text-[#f24e1e]" /> },
@@ -37,9 +38,9 @@ const items = {
         { name: "GitHub", url: "#", description: "Hosting", icon: <SiGithub className="dark:text-white" /> },
         { name: "Vercel", url: "#", description: "Deployment", icon: <SiVercel className="dark:text-white" /> },
         { name: "Netlify", url: "#", description: "Static Hosting", icon: <SiNetlify className="text-[#00c7b7]" /> },
-        { name: "AWS Services", url: "#", description: "Cloud Computing", icon: <SiAmazonwebservices className="text-[#FF9900]" /> },
-        { name: "AWS EC2", url: "#", description: "Virtual Servers", icon: <SiAmazonec2 className="text-[#FF9900]" /> },
-        { name: "AWS S3", url: "#", description: "Object Storage", icon: <SiAmazons3 className="text-[#569A31]" /> },
+        { name: "AWS Services", url: "#", description: "Cloud Computing", icon: <FaAws className="text-[#FF9900]" /> },
+        { name: "AWS EC2", url: "#", description: "Virtual Servers", icon: <FaAws className="text-[#FF9900]" /> },
+        { name: "AWS S3", url: "#", description: "Object Storage", icon: <FaAws className="text-[#569A31]" /> },
         { name: "Hostinger", url: "#", description: "Web Hosting", icon: <SiHostinger className="text-[#673DE6]" /> },
         { name: "Namecheap", url: "#", description: "Domain & Hosting", icon: <SiNamecheap className="text-[#DE3723]" /> },
         { name: "GoDaddy", url: "#", description: "Domain Registrar", icon: <SiGodaddy className="text-[#1BDBDB]" /> },
@@ -48,66 +49,65 @@ const items = {
 
 const AboutSection = () => {
     useEffect(() => {
-        ScrollTrigger.refresh();
+        // Create a context for all animations
+        const ctx = gsap.context(() => {
+            ScrollTrigger.refresh();
 
-        // Reveal effect for main cards
-        gsap.fromTo(".reveal-card",
-            { opacity: 0, y: 50, filter: "blur(10px)" },
-            {
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".about-container",
-                    start: "top 80%",
+            // Reveal effect for main cards
+            gsap.fromTo(".reveal-card",
+                { opacity: 0, y: 50, filter: "blur(10px)" },
+                {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".about-container",
+                        start: "top 80%",
+                    }
                 }
-            }
-        );
+            );
 
-        // Tech stack reveal
-        gsap.fromTo(".tech-category-card",
-            { opacity: 0, scale: 0.95, y: 30 },
-            {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: 0.15,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: ".tech-ecosystem-section",
-                    start: "top 85%",
+            // Tech stack reveal
+            gsap.fromTo(".tech-category-card",
+                { opacity: 0, scale: 0.95, y: 30 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".tech-ecosystem-section",
+                        start: "top 85%",
+                    }
                 }
-            }
-        );
+            );
 
-        // Quotes and Skills
-        gsap.fromTo(".reveal-bottom",
-            { opacity: 0, y: 40 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".reveal-bottom-trigger",
-                    start: "top 90%",
+            // Quotes and Skills
+            gsap.fromTo(".reveal-bottom",
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".reveal-bottom-trigger",
+                        start: "top 90%",
+                    }
                 }
-            }
-        );
+            );
+        });
 
         return () => {
-            ScrollTrigger.getAll().forEach(t => t.kill());
+            ctx.revert(); // Clean up all animations and ScrollTriggers
         };
     }, []);
-
-    const cardHover = {
-        hover: { y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", borderColor: "rgba(39, 177, 115, 0.3)" }
-    };
 
     return (
         <div className="max-w-7xl mx-auto px-6 py-32 about-container" style={{ fontFamily: 'Outfit, sans-serif' }}>

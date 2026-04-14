@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FiMail, FiSend, FiMapPin, FiPhone, FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi';
 
 const ContactUs = () => {
@@ -35,7 +35,9 @@ const ContactUs = () => {
         const userID = 'AcpETFVOjwFjv9bzd';
 
         emailjs
-            .send(serviceID, templateID, formData, userID)
+            .send(serviceID, templateID, formData, {
+                publicKey: userID,
+            })
             .then((response) => {
                 console.log('Email sent successfully:', response);
                 setFormData({ name: '', email: '', subject: '', message: '' }); // Clear the form
