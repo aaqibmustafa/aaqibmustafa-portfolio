@@ -6,26 +6,30 @@ const ContributionGraph = () => {
     const years = [2024, 2023, 2022, 2021, 2020];
     const [selectedYear, setSelectedYear] = useState(years[0]);
 
-    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    // Memoize adjusted days in month to prevent re-creation on every render
+    const adjustedDaysInMonth = useMemo(() => {
+        const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+        const adjusted = [...daysInMonth];
+        if (isLeapYear(selectedYear)) adjusted[1] = 29;
+        return adjusted;
+    }, [selectedYear]);
 
-    // Adjust February if the selected year is a leap year
-    const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-    if (isLeapYear(selectedYear)) daysInMonth[1] = 29;
+    // Memoize dummy data for contributions
+    const contributions = useMemo(() => {
+        const totalDays = adjustedDaysInMonth.reduce((sum, days) => sum + days, 0);
+        return Array.from({ length: totalDays }, () => Math.floor(Math.random() * 5));
+    }, [adjustedDaysInMonth]);
 
-    // Memoize dummy data for contributions to prevent re-randomizing and re-calculating on every render
-    const contributions = useMemo(() => Array.from({ length: 365 }, () =>
-        Math.floor(Math.random() * 5)
-    ), [selectedYear]);
-
-    // Split contributions data into months based on daysInMonth
+    // Split contributions data into months based on adjustedDaysInMonth
     const monthlyContributions = useMemo(() => {
         let dayIndex = 0;
-        return daysInMonth.map((days) => {
+        return adjustedDaysInMonth.map((days) => {
             const monthData = contributions.slice(dayIndex, dayIndex + days);
             dayIndex += days;
             return monthData;
         });
-    }, [contributions, daysInMonth]);
+    }, [contributions, adjustedDaysInMonth]);
 
     // Animation variants for staggered grid
     const containerGrid = {

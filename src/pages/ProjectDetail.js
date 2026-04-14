@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectData } from '../data/projectsData';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 const ProjectDetail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const project = projectData.find(p => p.id === parseInt(id));
     const { scrollYProgress } = useScroll();
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
 
     useEffect(() => {
         window.scrollTo(0, 0);

@@ -86,51 +86,55 @@ const Blogs = () => {
         : BlogsData.filter(blog => blog.category === selectedCategory);
 
     useEffect(() => {
-        ScrollTrigger.refresh();
+        const ctx = gsap.context(() => {
+            ScrollTrigger.refresh();
 
-        // Header Reveal
-        gsap.fromTo(
-            ".blogs-header",
-            { opacity: 0, y: -40, filter: "blur(10px)" },
-            {
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-                duration: 1.2,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: ".blogs-header",
-                    start: "top 85%",
+            // Header Reveal
+            gsap.fromTo(
+                ".blogs-header",
+                { opacity: 0, y: -40, filter: "blur(10px)" },
+                {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: ".blogs-header",
+                        start: "top 85%",
+                    }
                 }
-            }
-        );
+            );
 
-        // Blogs Staggered Reveal
-        gsap.fromTo(
-            blogRefs.current,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.95,
-                filter: "blur(8px)"
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                filter: "blur(0px)",
-                duration: 1,
-                stagger: 0.1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".blogs-grid",
-                    start: "top 80%",
-                }
+            // Blogs Staggered Reveal
+            if (blogRefs.current.length > 0) {
+                gsap.fromTo(
+                    blogRefs.current,
+                    {
+                        opacity: 0,
+                        y: 40,
+                        scale: 0.95,
+                        filter: "blur(8px)"
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 1,
+                        stagger: 0.1,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: ".blogs-grid",
+                            start: "top 80%",
+                        }
+                    }
+                );
             }
-        );
+        });
 
         return () => {
-            ScrollTrigger.getAll().forEach(t => t.kill());
+            ctx.revert();
         };
     }, [selectedCategory]);
 
