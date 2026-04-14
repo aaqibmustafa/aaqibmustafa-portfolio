@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 
 const ContributionGraph = () => {
-    const years = [2024, 2023, 2022, 2021, 2020];
-    const [selectedYear, setSelectedYear] = useState(years[0]);
+    const years = [2025, 2024, 2023, 2022,2021];
+    const [selectedYear, setSelectedYear] = useState(2025); // Default to 2024
 
     // Memoize adjusted days in month to prevent re-creation on every render
     const adjustedDaysInMonth = useMemo(() => {
