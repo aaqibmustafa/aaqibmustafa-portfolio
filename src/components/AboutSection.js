@@ -6,8 +6,8 @@ import aboutsectionimage from "../assets/images/aboutsection.png";
 import resume from "../assets/resume/Muhammad Arif Raza.pdf";
 import { MdDownload } from "react-icons/md";
 import aboutsectionsvg from "../assets/About _ Victor Eke-8.svg";
-import { FaReact, FaNodeJs, FaFigma, FaAws } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiExpress, SiMongodb, SiGit, SiNotion, SiGithub, SiVercel, SiNetlify, SiFirebase, SiAndroidstudio, SiXcode, SiGoogleplay, SiAppstore, SiExpo, SiHostinger, SiNamecheap, SiGodaddy } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaFigma, FaAws, FaPhp, FaPython, FaLaravel } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiExpress, SiMongodb, SiGit, SiNotion, SiGithub, SiVercel, SiNetlify, SiFirebase, SiAndroidstudio, SiXcode, SiGoogleplay, SiAppstore, SiExpo, SiHostinger, SiNamecheap, SiGodaddy, SiMysql, SiCodeigniter, SiPhpstorm, SiPycharm, SiPostman } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,13 +15,20 @@ gsap.registerPlugin(ScrollTrigger);
 const items = {
     tools: [
         { name: "Visual Studio Code", url: "#", description: "Text Editor", icon: <VscCode className="text-[#007acc]" /> },
+        { name: "PHPStorm", url: "#", description: "PHP IDE", icon: <SiPhpstorm className="text-[#b345f1]" /> },
+        { name: "PyCharm", url: "#", description: "Python IDE", icon: <SiPycharm className="text-[#21d789]" /> },
         { name: "Android Studio", url: "#", description: "Mobile Dev", icon: <SiAndroidstudio className="text-[#3ddc84]" /> },
         { name: "Xcode", url: "#", description: "iOS Dev", icon: <SiXcode className="text-[#1575f5]" /> },
         { name: "Figma", url: "#", description: "Design Tool", icon: <FaFigma className="text-[#f24e1e]" /> },
         { name: "Terminal", url: "#", description: "Git Bash / Zsh", icon: <SiGit className="text-[#f1502f]" /> },
         { name: "Notion", url: "#", description: "Organization", icon: <SiNotion className="text-[#000000] dark:text-white" /> },
+        { name: "Postman", url: "#", description: "API Testing", icon: <SiPostman className="text-[#ff6c37]" /> },
     ],
     technologies: [
+        { name: "PHP", url: "#", description: "Backend Language", icon: <FaPhp className="text-[#777bb4]" /> },
+        { name: "Laravel", url: "#", description: "PHP Framework", icon: <FaLaravel className="text-[#ff2d20]" /> },
+        { name: "CodeIgniter", url: "#", description: "PHP Framework", icon: <SiCodeigniter className="text-[#ee4623]" /> },
+        { name: "MySQL", url: "#", description: "SQL Database", icon: <SiMysql className="text-[#4479a1]" /> },
         { name: "React Native", url: "#", description: "Mobile Apps", icon: <FaReact className="text-[#61dafb]" /> },
         { name: "React", url: "#", description: "UI Library", icon: <FaReact className="text-[#61dafb]" /> },
         { name: "Firebase", url: "#", description: "Backend / Auth", icon: <SiFirebase className="text-[#ffca28]" /> },
@@ -30,6 +37,8 @@ const items = {
         { name: "MongoDB", url: "#", description: "NoSQL Database", icon: <SiMongodb className="text-[#47a248]" /> },
         { name: "Next.js", url: "#", description: "React Framework", icon: <SiNextdotjs className="dark:text-white" /> },
         { name: "Tailwind CSS", url: "#", description: "Styling Library", icon: <SiTailwindcss className="text-[#38b2ac]" /> },
+        { name: "REST APIs", url: "#", description: "API Integration", icon: <SiPostman className="text-[#ff6c37]" /> },
+        { name: "Python", url: "#", description: "Programming", icon: <FaPython className="text-[#3776ab]" /> },
     ],
     platform: [
         { name: "Google Play", url: "#", description: "Play Console", icon: <SiGoogleplay className="text-[#4285f4]" /> },
@@ -127,10 +136,10 @@ const AboutSection = () => {
                         </motion.h1>
                         <div className="space-y-6 max-w-3xl">
                             <p className="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">
-                                I'm <span className="font-bold text-gray-900 dark:text-white">Aaqib Mustafa</span>, a Full Stack Web and App Developer / Full Stack Software Engineer with a focus on building scalable, high-performance applications.
+                                I'm <span className="font-bold text-gray-900 dark:text-white">Aaqib Mustafa</span>, a Full Stack Web & App Developer and Software Engineer specializing in building scalable, high-performance applications.
                             </p>
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                                With over 4 years of experience at HMB Solutions, I've mastered the art of turning complex business requirements into elegant digital realities. I specialize in building robust solutions for both web and mobile platforms.
+                               With over 3 years of experience at HMB Softwares Pvt. Ltd., I specialize in backend development using Laravel and CodeIgniter.
                             </p>
                         </div>
                     </div>
