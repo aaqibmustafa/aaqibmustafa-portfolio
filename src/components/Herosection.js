@@ -56,14 +56,14 @@ const Herosection = () => {
                             className="text-4xl text-gray-900 dark:text-white sm:text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight"
                             variants={itemVariants}
                         >
-                            Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#27b173] via-[#2dc682] to-[#1a663f]">Web & App Developer / Software Engineer</span>
+                            Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#27b173] via-[#2dc682] to-[#1a663f]">Web & App Developer / Backend Engineer</span>
                         </motion.h1>
 
                         <motion.p
                             className="text-gray-600 dark:text-gray-400 text-lg sm:text-2xl max-w-2xl leading-relaxed font-medium"
                             variants={itemVariants}
                         >
-                            I'm <span className="text-gray-900 dark:text-white border-b-2 border-[#27b173]/30">Aaqib Mustafa</span>. Crafting high-performance, accessible, and beautiful web and mobile applications for the modern digital era. I specialize in building scalable full-stack solutions and intuitive mobile experiences that drive user engagement. My passion lies in solving complex engineering challenges to deliver seamless, impact-driven software products.
+                            I'm <span className="text-gray-900 dark:text-white border-b-2 border-[#27b173]/30">Aaqib Mustafa</span>. a Software Engineer specializing in backend development with expertise in Laravel and CodeIgniter. I build scalable REST APIs and integrate secure payment APIs to deliver high-performance applications. I focus on clean, efficient code and reliable system architecture.
                         </motion.p>
                     </div>
 
@@ -121,7 +121,7 @@ const Herosection = () => {
                         >
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-xl bg-[#27b173] flex items-center justify-center text-white text-lg font-bold">
-                                    4+
+                                    3+
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Experience</p>
