@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutsectionimage from "../assets/images/aboutsection.png";
-import resume from "../assets/resume/Muhammad Arif Raza.pdf";
+import resume from "../assets/resume/AaqibMustafa.pdf";
 import { MdDownload } from "react-icons/md";
 import aboutsectionsvg from "../assets/About _ Victor Eke-8.svg";
 import { FaReact, FaNodeJs, FaFigma, FaAws, FaPhp, FaPython, FaLaravel } from 'react-icons/fa';
@@ -161,7 +161,7 @@ const AboutSection = () => {
                     <div className="flex flex-col gap-4">
                         <motion.a
                             href={resume}
-                            download="Muhammad_Arif_Raza_Resume.pdf"
+                            download="AaqibMustafa_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.02 }}
