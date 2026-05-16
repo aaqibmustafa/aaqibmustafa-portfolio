@@ -171,7 +171,7 @@ export const projectData = [
         id: 3,
         company: "Hmb Solutions Pvt. Ltd.",
         project: "healMindAndBody",
-        link: "https://arifch786.github.io/healmbwebsite/",
+        link: "https://healmb.com/",
         role: "Frontend Developer",
         date: "March, 2024",
         description: "As a Frontend Developer, I am responsible for designing user-friendly web applications with a focus on user experience.",
