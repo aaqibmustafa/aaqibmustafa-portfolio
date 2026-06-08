@@ -7,24 +7,24 @@ import image9 from "../assets/images/projectsimages/lcc.png";
 import image11 from "../assets/images/projectsimages/cardmate2.png";
 import image12 from "../assets/images/projectsimages/aimhalal.png";
 import aimHalalVideo from "../assets/videos/aimhalalgallary/aimhalalvideo.mp4";
-import aimHalalGallery1 from "../assets/videos/aimhalalgallary/screencapture-aimhalal-2025-12-23-01_51_29.png";
-import aimHalalGallery2 from "../assets/videos/aimhalalgallary/screencapture-aimhalal-dashboard-home-2025-12-23-01_52_14.png";
-import aimHalalGallery3 from "../assets/videos/aimhalalgallary/screencapture-aimhalal-vendor-Home-2025-12-23-01_51_12.png";
+import aimHalalGallery1 from "../assets/videos/aimhalalgallary/aimhalal-main.png";
+import aimHalalGallery2 from "../assets/videos/aimhalalgallary/aimhalal-dashboard.png";
+import aimHalalGallery3 from "../assets/videos/aimhalalgallary/aimhalal-vendor.png";
 
 import hmbConnectVideo from "../assets/videos/connecthmbgallary/hmbconnectvideo.mp4";
-import hmbConnectGallery1 from "../assets/videos/connecthmbgallary/screencapture-connecthmb-2025-12-23-12_41_07.png";
-import hmbConnectGallery2 from "../assets/videos/connecthmbgallary/screencapture-connecthmb-admin-dashboard-2025-12-23-12_39_53.png";
-import hmbConnectGallery3 from "../assets/videos/connecthmbgallary/screencapture-connecthmb-home-2025-12-23-12_38_51.png";
+import hmbConnectGallery1 from "../assets/videos/connecthmbgallary/connecthmb-main.png";
+import hmbConnectGallery2 from "../assets/videos/connecthmbgallary/connecthmb-admin.png";
+import hmbConnectGallery3 from "../assets/videos/connecthmbgallary/connecthmb-home.png";
 
 import auctionVideo from "../assets/videos/auctiongallary/Yellow and Blue Modern Business Presentation (1).mp4";
-import auctionGallery1 from "../assets/videos/auctiongallary/screencapture-auctionintel-co-uk-2025-12-23-01_01_00.png";
-import auctionGallery2 from "../assets/videos/auctiongallary/screencapture-auctionintel-co-uk-admin-requests-2025-12-23-01_07_11.png";
-import auctionGallery3 from "../assets/videos/auctiongallary/screencapture-auctionintel-co-uk-user-dashboard-2025-12-23-01_02_08.png";
+import auctionGallery1 from "../assets/videos/auctiongallary/auction-main.png";
+import auctionGallery2 from "../assets/videos/auctiongallary/auction-admin.png";
+import auctionGallery3 from "../assets/videos/auctiongallary/auction-dashboard.png";
 
 import hmbVideo from "../assets/videos/healmindbodygallary/healmindbody.mp4";
-import hmbGallery1 from "../assets/videos/healmindbodygallary/screencapture-arifch786-github-io-healmbwebsite-2025-12-25-22_57_21.png";
-import hmbGallery2 from "../assets/videos/healmindbodygallary/screencapture-connect-healmb-administration-discovery-2025-12-25-22_41_35.png";
-import hmbGallery3 from "../assets/videos/healmindbodygallary/screencapture-connect-healmb-clinic-dashboard-2026-01-05-21_58_40.png";
+import hmbGallery1 from "../assets/videos/healmindbodygallary/healmb-gallery.png";
+import hmbGallery2 from "../assets/videos/healmindbodygallary/healmb-admin.png";
+import hmbGallery3 from "../assets/videos/healmindbodygallary/healmb-clinic.png";
 
 import translationVideo from "../assets/videos/translationappgalary/Untitled ‑ Made with FlexClip (7).mp4";
 import translationGallery1 from "../assets/videos/translationappgalary/14.jpg";
