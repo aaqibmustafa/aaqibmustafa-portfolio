@@ -1,0 +1,32 @@
+FAVICON SETUP INSTRUCTIONS
+==========================
+
+Your favicon configuration is ready in index.html and manifest.json!
+
+You just need to add the actual image files.
+
+QUICK STEPS:
+------------
+
+1. Go to: https://favicon.io/favicon-generator/
+
+2. Settings:
+   - Text: A
+   - Background: Rounded
+   - Font: Roboto
+   - Background Color: #27b173
+   - Font Color: #ffffff
+
+3. Download and extract the ZIP
+
+4. Copy these files to this folder (public/):
+   ✓ favicon.ico (already done)
+   ⚠ favicon-16x16.png
+   ⚠ favicon-32x32.png
+   ⚠ apple-touch-icon.png
+   ⚠ android-chrome-192x192.png → rename to logo192.png
+   ⚠ android-chrome-512x512.png → rename to logo512.png
+
+5. Restart: npm start
+
+See FAVICON_SETUP.md for detailed instructions!
